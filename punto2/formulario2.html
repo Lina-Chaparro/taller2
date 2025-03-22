@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Elección</title>
+</head>
+<body>
+    <h1>Calculo sucesivo o factorial</h1>
+    <br>
+    <form action="datospunto2.php" method="post">
+        <div>
+            <label>Escriba un número:</label>
+            <input name="num" type="number" required>
+        </div><br>
+        <div>
+            <label>Seleccione la operación que desea realizar</label>
+            <select name="operation">
+                <option value="fibbo">Cálculo Sucesión de Fibonacci</option>
+                <option value="fact">Cálculo Factorial</option>
+            </select>
+        </div><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
