@@ -37,6 +37,9 @@ class Numeros implements Model
             $union = array_unique($union);
 
             sort($union); // ORGANIZAR
+            if(empty($interseccion)){
+                return"No hay datos";
+            }
 
             return implode(", ", $union); //IMPLODE: CONVIERTE UN ARRAY A UNA CADENA DE TEXTO
     }
@@ -75,7 +78,7 @@ class Numeros implements Model
             sort($diferenciaA); // ORGANIZAR
 
             if(empty($diferenciaA)){
-                return"No hay datos en comun";
+                return"No hay datos que no estén en B ";
             }
             return implode(", ", $diferenciaA);
             //IMPLODE: CONVIERTE UN ARRAY A UNA CADENA DE TEXTO  
@@ -94,7 +97,7 @@ class Numeros implements Model
             sort($diferenciaB); // ORGANIZAR
 
             if(empty($diferenciaB)){
-                return"No hay datos en comun";
+                return"No hay datos que no estan en A";
             }
 
             return implode(", ", $diferenciaB); //IMPLODE: CONVIERTE UN ARRAY A UNA CADENA DE TEXTO
