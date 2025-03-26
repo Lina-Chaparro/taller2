@@ -37,7 +37,7 @@ class Numeros implements Model
             $union = array_unique($union);
 
             sort($union); // ORGANIZAR
-            if(empty($interseccion)){
+            if(empty($union)){
                 return"No hay datos";
             }
 
