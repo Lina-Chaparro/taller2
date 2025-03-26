@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.tree {
+    text-align: center;
+}
+
+.tree ul {
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tree ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-top: 2px solid #555;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li {
+    list-style-type: none;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.tree li::before, 
+.tree li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 20px;
+    border-top: 2px solid #555;
+}
+
+.tree li::before {
+    right: 50%;
+}
+
+.tree li::after {
+    left: 50%;
+}
+
+.tree li:only-child::before, 
+.tree li:only-child::after {
+    display: none;
+}
+
+.tree li a {
+    display: inline-block;
+    width: 40px; /* Tamaño del círculo */
+    height: 40px; /* Tamaño del círculo */
+    line-height: 40px; /* Centrar el texto verticalmente */
+    text-align: center; /* Centrar el texto horizontalmente */
+    text-decoration: none;
+    background: #d4a373;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%; /* Hace que el nodo sea un círculo */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+
+.tree li a:hover {
+    background: #b68960;
+}
+
+
+.tree li a:hover {
+    background: #b68960;
+}
+
+.tree ul ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #555;
+    width: 0;
+    height: 20px;
+}
+ 
+.circulo {
+    width: 50px; /* Ancho */
+    height: 50px; /* Alto */
+    background-color: #3498db; /* Color de fondo */
+    border-radius: 50%; /* Convierte el cuadrado en círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
